@@ -40,56 +40,56 @@ public class SpringDataJpaApplication  implements CommandLineRunner {
 		CustomerDto customer2= new CustomerDto(7022713744L, "Susan", 27, "F", "Alberta", 2);
 		CustomerDto customer3= new CustomerDto(7022713722L, "Lucy", 27, "F", "MUMBAI", 3);
 
-//
-//		logger.info(customerService.insertCustomer(customer1));
-//		logger.info(customerService.insertCustomer(customer2));
-//		logger.info(customerService.insertCustomer(customer3));
-//
-//
-//		logger.info("Enter the phone Number of the Customer which has to be deleted.");
-//		Long phoneNo1= scanner.nextLong();
-//
-//		logger.info(customerService.remove(phoneNo1));
-//
-//		logger.info("Let's update the current plan of a Customer");
-//		logger.info("Enter the phone Number of the Customer whose current plan has to be updated.");
-//		Long phoneNo2=scanner.nextLong();
-//
-//		logger.info("Enter the name");
-//		String name=scanner.next();
-//
-//		logger.info("Enter the age");
-//		Integer age=scanner.nextInt();
-//
-//		logger.info("Enter the gender");
-//		String gender=scanner.next();
-//
-//		logger.info("Enter the address");
-//		String address=scanner.next();
-//
-//		logger.info("Enter the plan");
-//		Integer plan=scanner.nextInt();
-//
-//		CustomerDto a=new CustomerDto();
-//		a.setPhoneNo(phoneNo2);
-//		a.setName(name);
-//		a.setAge(age);
-//		a.setGender(gender);
-//		a.setAddress(address);
-//		a.setPlanId(plan);
-//
-//		logger.info(customerService.update(phoneNo2,a));
-//
-//		ArrayList<Customer>aa= (ArrayList<Customer>) customerService.getall();
-//		for (Customer i:aa){
-//			logger.info(i);
-//		}
-//
-//		logger.info("Enter the phone Number of the Customer which has to be fetch.");
-//		Long phoneN03= scanner.nextLong();
-//		logger.info(customerService.get1Customer(phoneN03));
-//
-//		scanner.close();
+
+		logger.info(customerService.insertCustomer(customer1));
+		logger.info(customerService.insertCustomer(customer2));
+		logger.info(customerService.insertCustomer(customer3));
+
+
+		logger.info("Enter the phone Number of the Customer which has to be deleted.");
+		Long phoneNo1= scanner.nextLong();
+
+		logger.info(customerService.remove(phoneNo1));
+
+		logger.info("Let's update the current plan of a Customer");
+		logger.info("Enter the phone Number of the Customer whose current plan has to be updated.");
+		Long phoneNo2=scanner.nextLong();
+
+		logger.info("Enter the name");
+		String name=scanner.next();
+
+		logger.info("Enter the age");
+		Integer age=scanner.nextInt();
+
+		logger.info("Enter the gender");
+		String gender=scanner.next();
+
+		logger.info("Enter the address");
+		String address=scanner.next();
+
+		logger.info("Enter the plan");
+		Integer plan=scanner.nextInt();
+
+		CustomerDto a=new CustomerDto();
+		a.setPhoneNo(phoneNo2);
+		a.setName(name);
+		a.setAge(age);
+		a.setGender(gender);
+		a.setAddress(address);
+		a.setPlanId(plan);
+
+		logger.info(customerService.update(phoneNo2,a));
+
+		ArrayList<Customer>aa= (ArrayList<Customer>) customerService.getall();
+		for (Customer i:aa){
+			logger.info(i);
+		}
+
+		logger.info("Enter the phone Number of the Customer which has to be fetch.");
+		Long phoneN03= scanner.nextLong();
+		logger.info(customerService.get1Customer(phoneN03));
+
+		scanner.close();
 
 		int k=(int) (customerRepository.count()/3);
 
