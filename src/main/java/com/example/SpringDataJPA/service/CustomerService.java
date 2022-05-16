@@ -4,6 +4,9 @@ import com.example.SpringDataJPA.dto.CustomerDto;
 import com.example.SpringDataJPA.entity.Customer;
 import com.example.SpringDataJPA.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +50,13 @@ public class CustomerService {
         Customer cust=optionalCustomer.get();
         CustomerDto customerDto=Customer.customerDtoEntity(cust);
         return customerDto;
+    }
+
+    public Page<Customer> findAll(Pageable page){
+        return  customerRepository.findAll(page);
+    }
+
+    public List<Customer> findAll(Sort sort){
+        return customerRepository.findAll(sort);
     }
 }
